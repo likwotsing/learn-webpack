@@ -1,0 +1,1 @@
+export default '我是hotmodule.js...22'

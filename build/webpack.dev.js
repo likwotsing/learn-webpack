@@ -5,7 +5,16 @@ const webpack = require('webpack')
 module.exports = merge(baseConfig, {
   mode: 'development', // development production
   devServer: {
-    hot: true,
+    proxy: {
+      // '/api': 'http://localhost:9999'
+      '/api': {
+        target: 'http://localhost:9999',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
+    hot: true, // 开启热更新
     // contentBase: path.join(__dirname, 'src'),
     // contentBase: './src',
     open: true,
