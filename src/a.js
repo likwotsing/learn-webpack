@@ -1,4 +1,4 @@
-var a = 'haha';
-export default {
-  a
+var obj = {
+  name: '我是a.js...'
 }
+export default obj
